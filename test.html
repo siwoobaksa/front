@@ -8,6 +8,8 @@
         function abc(){
             alert("테스트 메세지");
         }
+
+        var arr=["1","2","3","4","5"];
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script>
@@ -16,8 +18,8 @@
             $("#btn").click(function(){
                 $("#box").stop().animate({
                     "left":"500px"
-                },1000,function(){
-                    $("#box").fadeout(1000);
+                },1000,function(){  //애니메이션 적용 후 그 다음 적용되는 함수
+                    $("#box").fadeout();
                 });
             });
         });
