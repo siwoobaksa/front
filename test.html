@@ -10,9 +10,11 @@
             alert("테스트 메세지");
         }
         $("#btn").click(function(){
-            $("#box").stop().animate({"left":"500px"},1000);
+            $("#box").stop().animate({"left":"500px"},1000,function(){
+                $("#box").fadeout(1000);
+            });
         });
-    </script>
+        </script>
     <style>
         .box{width: 100px; height: 100px; background-color: red;
             position: absolute;
