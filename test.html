@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Git 테스트 페이지</title>
+    <script src="http://lswhobby.dothome.co.kr/jq/jquery.js"></script>
     <script>
         function abc(){
             alert("테스트 메세지");
         }
+        $("#btn").click(function(){
+            alert("제이쿼리 테스트");
+        });
     </script>
 </head>
 <body>
     <input type="button" value="클릭" onclick="abc()">
+    <input type="button" value="애니메이션" id="btn">
 </body>
 </html>
