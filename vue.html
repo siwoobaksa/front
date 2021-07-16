@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE-Edge chrome=1">
+<title>Vue 1일차 - Vue 엔진 및 기본 Basic 부분</title>
+<!-- 
+Vue 엔진 
+https://cdn.jsdelivr.net/npm/vue  >  min.js
+Safari 3.X 이상 버전을 사용해야 Vue가 정상 작동한다
+
+CDN설치 : url로 해당 코드를 로드하여 출력하는 형태
+CLI설치 : APP개발시 CLI로 제작
+
+-->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <aside id="ccc" class="ccc">   <!-- 자기 구역 내에서는 다른 Vue를 사용할 수 없다. -->
+        <div id="abc">{{test}}</div>    <!-- {{ 가상의 변수값을 출력함 }} -->
+        <div id="bbb">{{test1}}</div>
+    </aside>
+
+</body>
+<script>
+
+    let a = new Vue({   //Vue 실행 부분 //변수 안써도 실행 가능
+        el:".ccc",  // el : 해당 태그 id, class 엘리먼트(element)의 약자.
+        data:{    // data : 인스턴스 (가상의 변수를 만들어서 출력하는 파트)
+            test:"Vue메세지 출력 연습",
+            test1:"메세지 추가 연습 및 vue 테스트"
+        }
+    });
+
+    let b = new Vue({   //Vue 실행 부분 //변수 안써도 실행 가능
+        el:"#bbb",
+        data:{
+            test1:"확장 Vue2 입니다."
+        }
+    });
+
+</script>
+</html>
